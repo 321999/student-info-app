@@ -13,6 +13,9 @@ students = [
 # @app.route("/")
 # def home():
 #     return "server is running successfully"
+@app.route("/kishore")
+def kishore():
+    return "Hi I am KISHORE This is devOps trainer"
 
 @app.route("/")
 def home():
