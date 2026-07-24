@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import redis
 
 app = Flask(__name__)
-r = redis.Redis(host='redis', port=6379)
+# r = redis.Redis(host='redis', port=6379)
 
 students = [
     {"name": "Aman", "class": "10th", "marks": 88},
@@ -16,7 +16,7 @@ students = [
 
 @app.route("/")
 def home():
-    visits = r.incr("visits")
-    return render_template("index.html", students=students, visits=visits)
+    # visits = r.incr("visits")
+    return render_template("index.html", students=students)
 
 app.run(host="0.0.0.0", port=5000, debug=True)

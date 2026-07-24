@@ -17,6 +17,6 @@ students = [
 @app.route("/")
 def home():
     visits = r.incr("visits")
-    return render_template("index.html", students=students, visits=visits)
+    return render_template("index.html", students=students,visits=visits)
 
 app.run(host="0.0.0.0", port=5000, debug=True)
